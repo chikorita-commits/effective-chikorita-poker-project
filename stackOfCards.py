@@ -24,7 +24,7 @@ import card
 #     - getCard(pos) - returns a Card at the 'pos'
 #     - __str__() - returns string of all the cards in the hand like '4♣ 10♥ A♠'
 #===========================================================================
-class StackOfCards(Card):
+class StackOfCards(Card): # inherits from card
 
     def __init__(self):
         '''
@@ -85,13 +85,14 @@ class StackOfCards(Card):
         Card2Value = Card2.getValue() 
         Card3Value = Card3.getValue()
         Card4Value = Card4.getValue()
-        Card5Value = card5.getValue() # get their values
+        Card5Value = Card5.getValue() # get their values
         sameSuit = (Card1Suit == Card2Suit == Card3Suit == Card4Suit == Card5Suit )
         if (Card1Rank == “A” and Card2Rank == “K” and Card3Rank == “Q” and Card4Rank == “J” and Card5Rank == “10”) and sameSuit:
             return "Royal Flush" # if ace king queen jack and ten are the same suits, then it is a royal flush )
-        elif (Card1Value == Card2Value + 1 and Card2Value == Card3Value +1 and Card3Value == Card4Value + 1 and Card4Value == Card5Value + 1 and sameSuit:
+        elif (Card1Value == Card2Value + 1 and Card2Value == Card3Value +1 and Card3Value == Card4Value + 1 and Card4Value == Card5Value + 1 and sameSuit):
             return "Straight flush" # if the rank(value) is sequential, and the same suits, then it is a straight
-        elif:
+        if 
+	    
         
         
 
