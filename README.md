@@ -1,2 +1,2 @@
 # effective-chikorita-poker-project
-Poker project???
+Work in progress
