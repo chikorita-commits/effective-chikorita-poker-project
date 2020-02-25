@@ -90,9 +90,14 @@ class StackOfCards(Card): # inherits from card
         if (Card1Rank == “A” and Card2Rank == “K” and Card3Rank == “Q” and Card4Rank == “J” and Card5Rank == “10”) and sameSuit:
             return "Royal Flush" # if ace king queen jack and ten are the same suits, then it is a royal flush )
         elif (Card1Value == Card2Value + 1 and Card2Value == Card3Value +1 and Card3Value == Card4Value + 1 and Card4Value == Card5Value + 1 and sameSuit):
-            return "Straight flush" # if the rank(value) is sequential, and the same suits, then it is a straight
-        if 
-	    
+        	return "Straight" # the obvious definition of straight
+		elif (Card1Value == 14, Card2Value == 2, Card3Value == 3, Card4Value == 4, Card5Value == 5):
+			return "Straight" #yep, that is a straight too
+        elif (Card1Value == Card2Value and Card2Value == Card3Value and Card3Value == Card4Value ):
+			return "Four of a kind" #four cards the same value
+		elif (Card1Value == Card2Value and Card2Value == Card3Value and Card4Value == Card5Value):
+			return "Full House"
+		elif
         
         
 
