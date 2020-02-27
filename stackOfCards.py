@@ -75,7 +75,7 @@ class StackOfCards(Card): # inherits from card
         Card2Rank = Card2.getRank() 
         Card3Rank = Card3.getRank()
         Card4Rank = Card4.getRank()
-        Card5Rank = card5.getRank() # get their ranks
+        Card5Rank = Card5.getRank() # get their ranks
         Card1Suit = Card1.getSuit()
         Card2Suit = Card2.getSuit() 
         Card3Suit = Card3.getSuit()
@@ -95,9 +95,19 @@ class StackOfCards(Card): # inherits from card
 			return "Straight" #yep, that is a straight too
         elif (Card1Value == Card2Value and Card2Value == Card3Value and Card3Value == Card4Value ):
 			return "Four of a kind" #four cards the same value
-		elif (Card1Value == Card2Value and Card2Value == Card3Value and Card4Value == Card5Value):
+        elif (Card1Value == Card2Value and Card2Value == Card3Value and Card4Value == Card5Value):
 			return "Full House"
-		elif
+		elif sameSuit:
+			return "Flush"
+		elif (Card1Value == Card2Value ) and (Card2Value == Card3Value ):
+			return "Three of a kind"
+		elif (Card1Value == Card2Value) and (Card4Value == Card5Value ):
+			return "Two Pairs"
+		elif (Card1Value == Card2Value ):
+			return "Pair"
+		else:
+			return "Nothing"
+		
         
         
 
