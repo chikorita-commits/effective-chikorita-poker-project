@@ -1,2 +1,2 @@
-# effective-chikorita-poker-project
+# chikorita
 Work in progress
