@@ -66,15 +66,15 @@ class StackOfCards(Card): # inherits from card
         self.cards.sort()
     def handType(self):
         
-     # WINNING_HANDS = [ "Royal Flush", \
-#                  "Straight Flush", \
-#                  "Four of a Kind", \
-#                  "Full House", \
-#                  "Flush", \
-#                  "Straight", \
-#                  "3 of a Kind", \
-#                 "Two Pairs", \
-#                  "Pair (Jacks or better)" ]
+     # WINNING_HANDS = [ "Royal Flush", \ #0
+#                  "Straight Flush", \ #1
+#                  "Four of a Kind", \ #2
+#                  "Full House", \ #3
+#                  "Flush", \ #4
+#                  "Straight", \ #5
+#                  "3 of a Kind", \ #6
+#                 "Two Pairs", \ #7
+#                  "Pair (Jacks or better)" ] #8
 def handType(self):
         if(self.cards[0].getValue()==10 and self.cards[1].getValue==11 and self.cards[2].getValue==12 and self.cards[3].getValue()==13 and self.cards[4].getValue==14):
             return WINNING_HANDS[0]
@@ -99,6 +99,10 @@ def handType(self):
             return WINNING_HANDS[6] 
         elif (self.cards[0].getvalue()==self.cards[1].getvalue()) and (self.cards[3].getvalue()==self.cards[4].getvalue()):
             return WINNING_HANDS[7]
+		elif (self.cards[0].getvalue()==self.cards[1].getvalue()) or (self.cards[1].getvalue()==self.cards[2].getvalue()) or (self.cards[2].getvalue()==self.cards[3].getvalue()) or (self.cards[3].getvalue()==self.cards[4].getvalue()):
+   			return WINNING_HANDS[8]
+		else:
+			return "Nothing"
    
         
         
